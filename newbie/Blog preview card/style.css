@@ -1,0 +1,166 @@
+/* =================================================
+   TABLE OF CONTENTS
+   =================================================
+   1. Root Variables
+   2. Reset
+   3. Body Layout
+   4. Card Component
+   5. Card Image
+   6. Card Text
+   7. Author Section
+   8. Responsive
+   9. Footer
+   ================================================= 
+*/
+
+
+/* ===== Root Variables ===== */
+:root {
+    /* Colors */
+    --color-yellow: hsl(47, 88%, 63%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-500: hsl(0, 0%, 42%);
+    --color-gray-950: hsl(0, 0%, 7%);
+
+    /* Typography */
+    --font-family-main: "Figtree", sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-extra-bold: 800;
+    --font-size-body: 16px;
+
+    /* Layout */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body Layout ===== */
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--color-yellow);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* ===== Card Component ===== */
+.card {
+    max-width: 380px;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+
+    border: 1px solid var(--color-gray-950);
+    background-color: var(--color-white);
+
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px 0px var(--color-gray-950);
+
+    transition: all 0.2s ease;
+}
+
+/* ===== Card Image ===== */
+.card .img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 24px;
+}
+
+/* ===== Card Text ===== */
+.card .text h4 {
+    display: block;
+    width: fit-content;
+
+    background-color: var(--color-yellow);
+    color: var(--color-gray-950);
+
+    font-weight: var(--font-weight-extra-bold);
+    padding: 4px 12px;
+
+    border-radius: 4px;
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.card .text h4+p {
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-medium);
+    font-size: 14px;
+    color: var(--color-gray-950);
+}
+
+.card .text h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: var(--font-weight-extra-bold);
+    color: var(--color-gray-950);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card .text h1:hover {
+    color: var(--color-yellow);
+}
+
+.card .text h1+p {
+    margin-bottom: 20px;
+    color: var(--color-gray-500);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* ===== Author Section ===== */
+.card .author {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.card .author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.author p {
+    font-weight: var(--font-weight-extra-bold);
+    font-size: 14px;
+    color: var(--color-gray-950);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 739px) {
+    .card .text h1 {
+        font-size: 20px;
+    }
+}
+
+/* ===== Footer Styling ===== */
+.attribution {
+    position: absolute; 
+    bottom: 20px;       
+    width: 100%;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

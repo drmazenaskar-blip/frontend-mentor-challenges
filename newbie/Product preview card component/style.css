@@ -1,0 +1,187 @@
+/* ===== Global Configurations ===== */
+:root {
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --font-family-heading: 'Fraunces', serif;
+    --font-family-body: 'Montserrat', sans-serif;
+    --font-size-paragraph: 14px;
+    --margin-bottom: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* ===== Base Styles ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+    min-height: 100vh;
+}
+
+/* ===== Layout Component ===== */
+section {
+    display: flex;
+    flex-direction: row;
+    max-width: 560px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section .img {
+    width: 50%;
+}
+
+section .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Content Typography ===== */
+section .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 32px;
+}
+
+section .text h3 {
+    margin-bottom: var(--margin-bottom);
+    color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+section .text h1 {
+    margin-bottom: var(--margin-bottom);
+    color: var(--black);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+section .text p {
+    margin-bottom: var(--margin-bottom);
+    color: var(--grey);
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+}
+
+/* ===== Pricing Section ===== */
+section .text span {
+    display: inline-block;
+    position: relative;
+    margin-bottom: var(--margin-bottom);
+    color: var(--green-500);
+    font-family: var(--font-family-heading);
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+section .text span:after {
+    content: attr(data-old-price);
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-20%);
+    color: var(--grey);
+    font-family: var(--font-family-body);
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+/* ===== Interactive Elements ===== */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--green-500);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--green-700);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ===== Responsive Media Queries ===== */
+@media (max-width: 767px) {
+    body {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    section {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    section .img, 
+    section .text {
+        width: 100%;
+    }
+
+    section .img {
+        height: 350px;
+    }
+
+    section .text {
+        padding: 24px;
+    }
+
+    section .text span::after {
+        position: static;
+        display: inline-block;
+        margin-left: 20px;
+        transform: none;
+    }
+
+    .attribution {
+        position: static;
+        margin-top: var(--margin-bottom);
+    }
+}

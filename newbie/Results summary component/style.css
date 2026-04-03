@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root {
+
+    /* Primary Colors */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Typography */
+    --font-family: "Hanken Grotesk", sans-serif;
+    --font-size-body: 18px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: var(--light-lavender);
+    font-family: "Hanken Grotesk", sans-serif;
+    overflow-y: auto;
+}
+
+
+.container {
+    background-color: var(--white);
+    display: flex;
+    max-width: 650px;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    height: 500px;
+
+}
+
+/* Left Column (The Result) */
+.rtl-column {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rtl-column h2 {
+    color: var(--light-lavender);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.circle strong {
+    display: block;
+    color: var(--white);
+    font-size: 3.5rem;
+
+}
+
+
+.circle span {
+    color: var(--light-lavender);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.result h3 {
+    margin: 20px 0 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.result p {
+    color: var(--light-lavender);
+    font-size: 0.95rem;
+    line-height: 1.4;
+
+}
+
+/* Right Column (Summary) */
+.lft-column {
+    flex: 1;
+    padding: 40px;
+
+
+}
+
+.lft-column h2 {
+    color: var(--dark-gray-blue);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.lft-column ul li {
+    margin-bottom: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.lft-column li:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: var(--light-red);
+}
+
+.lft-column li:nth-child(2) {
+    background-color: hsl(39, 100%, 56%, 0.1);
+    color: var(--orangey-yellow);
+}
+
+.lft-column li:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--green-teal);
+}
+
+.lft-column li:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: var(--cobalt-blue);
+}
+
+.lft-column li span:last-child {
+
+    color: var(--light-lavender);
+    position: relative;
+    font-weight: bold;
+}
+
+li span:last-child::before {
+    content: attr(data-text);
+    color: var(--dark-gray-blue);
+    font-weight: 800;
+
+}
+
+
+.lft-column button {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+.lft-column button:hover {
+  background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+
+}
+
+/* Responsive for Mobile */
+@media (max-width: 767px) {
+   
+    .container {
+        height: inherit;
+        flex-direction: column;
+        border-radius: 0;
+        width: 100%;
+        overflow: scroll;
+
+        
+
+    }
+
+
+
+    .rtl-column {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .lft-column button {
+        margin: 40px 0px 0px 0px;
+    }
+}

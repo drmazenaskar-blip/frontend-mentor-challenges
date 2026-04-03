@@ -1,0 +1,105 @@
+/* globals Rules */
+:root {
+  /* Colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --font-size-paragraph: 14px;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/*  End globals Rules */
+
+
+/* start of main */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-900);
+    height: 100vh;
+}
+
+section{
+    flex: 1;
+    height: fit-content;
+    max-width: 320px; 
+    background-color: var(--grey-800);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    border-radius: 10px;
+}
+section .logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+section .text h1{
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 5px; 
+  font-size: 1.4em;
+}
+section .text p{
+  text-align: center;
+  color: var(--green);
+  margin-bottom: 5px; 
+  font-size: 14px;
+}
+
+section .social-link h6{
+    color: var(--white);
+    margin-bottom: 15px; 
+    text-align: center;
+    font-weight: normal;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+section .social-link ul {
+    width: 100%;
+}
+
+section .social-link ul li{
+   width: 100%;
+   display: block;
+   text-align: center;
+   padding: 12px 20px; 
+   margin-bottom: 8px;
+   background-color: var(--grey-700);
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+
+section .social-link ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 13px;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+section .social-link ul li:hover {
+    background-color: var(--green);
+}
+
+section .social-link ul li:hover a{
+    color: black;
+}
+/* end of main */
