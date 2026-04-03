@@ -1,171 +1,201 @@
+/* =========================================
+   1. Root Variables
+   ========================================= */
 :root {
-  /* ===== Colors ===== */
-  
-  /* Primary */
+  /* Colors - Primary */
   --color-blue-100: hsl(225, 100%, 94%);
   --color-blue-700: hsl(245, 75%, 52%);
   
-  /* Neutral */
+  /* Colors - Neutral */
   --color-blue-50: hsl(225, 100%, 98%);
   --color-gray-600: hsl(224, 23%, 55%);
   --color-blue-950: hsl(223, 47%, 23%);
 
-  /* ===== Typography ===== */
-  
-  /* Font Family */
+  /* Typography */
   --font-family-base: 'Red Hat Display', sans-serif;
-  
-  /* Font Weights */
   --font-weight-regular: 500;
   --font-weight-bold: 700;
   --font-weight-black: 900;
-  --margin:15px;
-  
-  /* Body Copy */
   --font-size-paragraph: 16px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+  /* Spacing */
+  --margin: 15px;
 }
 
-body{
+/* =========================================
+   2. Reset & Base Styles
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   font-family: var(--font-family-base);
+  background-color: var(--color-blue-100);
   background-image: url(images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  background-color: var(--color-blue-100);
+  padding: 20px; 
+}
 
-
-}.card{
+/* =========================================
+   3. Card Component
+   ========================================= */
+.card {
   max-width: 360px;
   width: 100%;
+  background-color: var(--color-blue-50);
+  border-radius: 10px;
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background-color: var(--color-blue-50);
-
-
 }
-.card-header img{
+
+.card-header img {
   width: 100%;
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
-.card-body{
+.card-body {
   padding: 20px 40px;
   text-align: center;
+}
 
-}
+/* Text Content */
 .text h1 {
-    color: var(--color-blue-950);
-    font-weight: var(--font-weight-black);
-    font-size: 1.4em;
-    margin-bottom: var(--margin);
-  }
-  .text p {
-    color: var(--color-gray-600);
-    line-height: 1.6;
-    margin-bottom: 30px;
-    margin-top: 0%;
+  color: var(--color-blue-950);
+  font-weight: var(--font-weight-black);
+  font-size: 1.4em;
+  margin-bottom: var(--margin);
 }
-.plan-container{
-  background-color:hsl(228, 59%, 96%);
+
+.text p {
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   4. Plan Section
+   ========================================= */
+.plan-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  background-color: hsl(228, 59%, 96%);
   border-radius: 12px;
+}
+
+.plan-details {
   display: flex;
   align-items: center;
-  flex-direction: row;
- justify-content: space-between;
- padding: 20px 15px;
- margin-bottom: 30px;
- 
+  gap: 8px;
+  text-align: left;
+  font-size: small;
 }
-.plan-details {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-align: left;
-    font-size: small;
-}
+
 .plan-details img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-   
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 .plan-details strong {
-    display: block;
-    color: var(--color-blue-950);
-    font-weight: var(--font-weight-black);
+  display: block;
+  color: var(--color-blue-950);
+  font-weight: var(--font-weight-black);
 }
+
 .plan-details p {
-    margin-bottom: 0; 
-    font-size: 0.9rem;
-    color: var(--color-gray-600);
+  margin-bottom: 0; 
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
 }
- .plan-container a{
+
+.plan-container a {
   color: var(--color-blue-950);
   font-weight: var(--font-weight-bold);
- }
-  .plan-container a:hover{
-  color: var(--color-blue-700);
-  font-weight: var(--font-weight-bold);
-  text-decoration: none;
-  }
- .btn-primary{
-    width: 100%;
-    background-color: var(--color-blue-700);
-    color:var(--color-blue-50);
-    border: none;
-    padding: 12px 50px;
-    border-radius: 10px;
-    font-weight: var(--font-weight-black);
-    font-size: 12px;
-    cursor: pointer;
-    box-shadow: 0px 15px 20px rgba(56, 41, 224, 0.2);
-    transition: 0.3s;
-    margin-bottom: 25px;
-
- }
- button.btn-primary:hover {
-    opacity: 0.6;
 }
-.btn-secondary{
+
+.plan-container a:hover {
+  color: var(--color-blue-700);
+  text-decoration: none;
+}
+
+/* =========================================
+   5. Buttons
+   ========================================= */
+.btn-primary {
+  width: 100%;
+  padding: 12px 50px;
+  margin-bottom: 25px;
+  background-color: var(--color-blue-700);
+  color: var(--color-blue-50);
+  border: none;
+  border-radius: 10px;
+  font-weight: var(--font-weight-black);
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px rgba(56, 41, 224, 0.2);
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+.btn-secondary {
+  background-color: transparent; 
+  color: var(--color-gray-600);
   border: none;
   outline: none;
-  color: var(--color-gray-600);
-  background-color: var(--color-blue-50);
-  
   cursor: pointer;
-}
-.btn-secondary:hover{
- color: black;
- font-weight: bolder;
-
+  font-weight: var(--font-weight-bold);
+  transition: 0.3s;
 }
 
+.btn-secondary:hover {
+  color: black;
+}
 
-/* ===== Footer Styling ===== */
+/* =========================================
+   6. Footer & Attribution
+   ========================================= */
 .attribution {
-    font-size: small;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: var(--white);
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 11px;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
+}
+
+/* =========================================
+   7. Media Queries (Mobile Optimization)
+   ========================================= */
+@media (max-width: 375px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+  
+  .card-body {
+    padding: 20px 24px;
+  }
 }
