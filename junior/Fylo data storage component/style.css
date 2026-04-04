@@ -1,0 +1,270 @@
+:root {
+
+    /* ===== Colors ===== */
+
+    /* Primary */
+    --gradient-start: hsl(6, 100%, 80%);
+    --gradient-end: hsl(335, 100%, 65%);
+
+    /* Neutral */
+    --blue-200: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --blue-850: hsl(228, 56%, 26%);
+    --blue-950: hsl(229, 57%, 11%);
+
+
+    /* ===== Typography ===== */
+
+    --font-size-body: 14px;
+
+    --font-family-main: "Raleway", sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+
+
+}
+
+body {
+    background-image: url(images/bg-desktop.png);
+    background-color: var(--blue-950);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    width: 100%;
+    /* اجباري يفرش */
+    width: 950px;
+    /* السقف */
+
+}
+
+.card {
+    flex: 0 0 340px;
+    height: 200px;
+    padding: 50px 40px 30px 40px;
+    background-color: var(--blue-850);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+
+}
+
+.card .img-2 .black {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-950);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.card .img-2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .img-2 img {
+    width: 20px;
+    height: 20px;
+}
+
+.storage {
+    flex: 1;
+    background-color: var(--blue-850);
+    padding: 40px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.storage .bubble {
+    background-color: white;
+    width: fit-content;
+    padding: 15px 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: -40px;
+    right: 40px;
+    border-bottom-right-radius: 0px;
+
+}
+
+.storage .bubble strong {
+    font-size: 30px;
+    font-weight: var(--font-weight-bold);
+
+}
+
+.storage .bubble span {
+    font-size: small;
+    color: var(--grayish-blue);
+    font-weight: bolder;
+    position: relative;
+    margin-left: 3px;
+    bottom: 5px;;
+
+
+}
+
+.storage .bubble span::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: white white transparent transparent;
+    display: inline-block;
+    position: absolute;
+    bottom: -38px;
+    right: -20px;
+
+
+
+}
+
+.storage h1 {
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    color: var(--grayish-blue);
+}
+
+.storage h1 strong {
+    color: var(--blue-200);
+}
+
+.storage p {
+    font-size: var(--font-size-body);
+    color: var(--grayish-blue);
+
+}
+
+.storage .line {
+    width: 100%;
+    height: 15px;
+    background-color: var(--blue-950);
+    border-radius: 30px;
+
+}
+
+.storage .line .progress {
+    display: block;
+    width: 80%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 30px;
+    position: relative;
+}
+
+.storage .line .progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--blue-200);
+
+}
+
+.storage .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--blue-200);
+}
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--grayish-blue);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 20px;
+    
+}
+.attribution a { color: white }
+
+
+@media (max-width: 1000px) {
+    main {
+        width: 100%;
+    }
+
+    body {
+        padding: 0 25px;
+        align-items: start;
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    .card {
+        flex: 0 0 150px;
+    }
+
+
+}
+@media (max-width: 767px) {
+    body{
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+    }
+    .container {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 15px;
+    }
+    .storage h1{
+        font-size: 10px;
+    }
+    .card, .storage {
+        width: 100%; 
+    }
+    .attribution {
+        font-size: 12px;
+    }
+    .storage .bubble{
+       right: 50%;
+       transform: translateX(50%);
+       top: 80%;
+       border-bottom-right-radius: 8px;
+    }
+    .storage .bubble span::before { 
+        display: none; 
+    }
+    
+}

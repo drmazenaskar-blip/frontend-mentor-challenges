@@ -2,24 +2,18 @@
    1. Root Variables
    ========================================= */
 :root {
-  /* Colors - Primary */
   --color-blue-100: hsl(225, 100%, 94%);
   --color-blue-700: hsl(245, 75%, 52%);
-  
-  /* Colors - Neutral */
-  --color-blue-50: hsl(225, 100%, 98%);
+  --color-blue-hover: hsl(245, 83%, 68%);
+  --color-blue-50: hsl(0, 0%, 100%);
   --color-gray-600: hsl(224, 23%, 55%);
   --color-blue-950: hsl(223, 47%, 23%);
+  --color-plan-bg: hsl(225, 100%, 98%);
 
-  /* Typography */
   --font-family-base: 'Red Hat Display', sans-serif;
-  --font-weight-regular: 500;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --font-weight-black: 900;
-  --font-size-paragraph: 16px;
-
-  /* Spacing */
-  --margin: 15px;
 }
 
 /* =========================================
@@ -34,7 +28,6 @@
 body {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: var(--font-family-base);
@@ -43,20 +36,20 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  padding: 20px; 
+  padding: 24px;
 }
 
 /* =========================================
    3. Card Component
    ========================================= */
 .card {
-  max-width: 360px;
+  max-width: 450px;
   width: 100%;
   background-color: var(--color-blue-50);
-  border-radius: 10px;
-  overflow: hidden; 
-  display: flex;
-  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(56, 41, 224, 0.1);
+  text-align: center;
 }
 
 .card-header img {
@@ -65,23 +58,23 @@ body {
 }
 
 .card-body {
-  padding: 20px 40px;
-  text-align: center;
+  padding: 45px 48px; /* تباعد داخلي مريح مثل الموقع الأصلي */
 }
 
 /* Text Content */
 .text h1 {
   color: var(--color-blue-950);
   font-weight: var(--font-weight-black);
-  font-size: 1.4em;
-  margin-bottom: var(--margin);
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .text p {
   color: var(--color-gray-600);
   line-height: 1.6;
-  margin-top: 0;
-  margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  padding: 0 10px;
 }
 
 /* =========================================
@@ -89,51 +82,51 @@ body {
    ========================================= */
 .plan-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 20px 15px;
-  margin-bottom: 30px;
-  background-color: hsl(228, 59%, 96%);
+  background-color: var(--color-plan-bg);
+  padding: 25px;
   border-radius: 12px;
+  margin-bottom: 25px;
 }
 
 .plan-details {
   display: flex;
   align-items: center;
-  gap: 8px;
-  text-align: left;
-  font-size: small;
+  gap: 20px;
 }
 
 .plan-details img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 48px;
+  height: 48px;
+}
+
+.plan-details div {
+  text-align: left;
 }
 
 .plan-details strong {
   display: block;
   color: var(--color-blue-950);
   font-weight: var(--font-weight-black);
+  font-size: 16px;
 }
 
-.plan-details p {
-  margin-bottom: 0; 
-  font-size: 0.9rem;
+.plan-details span {
   color: var(--color-gray-600);
+  font-size: 15px;
 }
 
 .plan-container a {
-  color: var(--color-blue-950);
+  color: var(--color-blue-700);
   font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .plan-container a:hover {
-  color: var(--color-blue-700);
   text-decoration: none;
+  color: var(--color-blue-hover);
 }
 
 /* =========================================
@@ -141,35 +134,37 @@ body {
    ========================================= */
 .btn-primary {
   width: 100%;
-  padding: 12px 50px;
-  margin-bottom: 25px;
+  padding: 15px;
+  margin-bottom: 15px;
   background-color: var(--color-blue-700);
-  color: var(--color-blue-50);
+  color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: var(--font-weight-black);
-  font-size: 12px;
+  font-size: 15px;
   cursor: pointer;
-  box-shadow: 0px 15px 20px rgba(56, 41, 224, 0.2);
-  transition: 0.3s ease;
+  box-shadow: 0px 20px 20px rgba(56, 41, 224, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  opacity: 0.7;
+  background-color: var(--color-blue-hover);
 }
 
 .btn-secondary {
-  background-color: transparent; 
+  width: 100%;
+  background-color: transparent;
   color: var(--color-gray-600);
   border: none;
-  outline: none;
+  padding: 15px;
   cursor: pointer;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
+  font-size: 15px;
   transition: 0.3s;
 }
 
 .btn-secondary:hover {
-  color: black;
+  color: var(--color-blue-950);
 }
 
 /* =========================================

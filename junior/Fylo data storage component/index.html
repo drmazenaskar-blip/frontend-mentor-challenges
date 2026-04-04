@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="img-1">
+          <img src="images/logo.svg" alt="logo">
+        </div>
+        <div class="img-2">
+         <div class="black"><img src="images/icon-document.svg" alt="icon-document"></div>
+         <div class="black"><img src="images/icon-folder.svg" alt="icon-folder"></div>
+         <div class="black"> <img src="images/icon-upload.svg" alt="icon-upload"></div>
+        </div>
+      </div>
+      <div class="storage">
+        <div class="bubble">
+          <strong>185</strong> <span>GB Left</span>
+        </div>
 
-  You’ve used 815 GB of your storage
+        <h1>You’ve used <strong>815 GB</strong> of your storage</h1>
+        <div class="line">
+          <span class="progress"></span>
+        </div>
+        <div class="info">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
+      </div>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
+    </div>
+  </main>
+
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
 </body>
+
 </html>
+
+
+
+
