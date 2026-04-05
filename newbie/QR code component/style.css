@@ -32,7 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .container {
@@ -42,44 +42,55 @@ body {
 }
 
 .qr-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-white);
-  padding: 16px;
-  border-radius: 20px;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+  border-radius: 1.25rem;
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
-  max-width: 320px;
+  max-width: 20rem;
+  height: 31.1875rem;
   width: 100%;
   text-align: center;
+  gap: 1.5rem;
 }
 
 .qr-image {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: block;
 }
 
 .text-content {
-  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1rem;
+   gap: 1rem;
 }
 
 .qr-card h1 {
   color: var(--color-slate-900);
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 16px;
-  line-height: 1.2;
+  font-weight: bold;
+  
+ 
 }
 
 .qr-card p {
   color: var(--color-slate-500);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: var(--font-weight-regular);
-  line-height: 1.4;
+  font-weight: var(--font-weight-regular);
 }
 
 .attribution { 
-  font-size: 11px; 
+  position: absolute; 
+  bottom: 1.25rem;
+  font-size: 1.125rem; 
   text-align: center; 
-  margin-top: 20px;
+  margin-block-start:1.25rem;
 }
 
 .attribution a { 

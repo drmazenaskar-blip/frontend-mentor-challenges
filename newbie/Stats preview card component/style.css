@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap');
+
+:root {
+    /* Primary Colors */
+    --clr-navy-950: hsl(233, 47%, 7%);
+    /* Main Background */
+    --clr-blue-950: hsl(244, 37%, 16%);
+    /* Card Background */
+    --clr-purple-500: hsl(277, 64%, 61%);
+    /* Accent Color */
+
+    /* Neutral Colors */
+    --clr-white: hsl(0, 0%, 100%);
+    /* Headings & Stats */
+    --clr-white-para: hsla(0, 0%, 100%, 0.75);
+    /* Main Paragraph */
+    --clr-white-stat: hsla(0, 0%, 100%, 0.6);
+    /* Stat Headings */
+
+    /* Typography - Fonts */
+    --ff-inter: "Inter", sans-serif;
+    --ff-lexend: "Lexend Deca", sans-serif;
+
+    /* Typography - Sizes & Weights */
+    --fs-body: 0.9375rem;
+    /* 15px / 16 */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-navy-950);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.card {
+    max-width: 70.5rem;
+    height: 27.625rem;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--clr-blue-950);
+    border-radius: 0.625rem;
+
+}
+
+/* img section */
+img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+.image-container {
+    flex: 0 0 50%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container::after {
+    content: "";
+    background-color: var(--clr-purple-500);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+/* content-section */
+.card-content {
+    flex: 0 0 50%;
+    padding: 4rem 5rem;
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.text h1 {
+    font-weight: bold;
+    font-size: 2.25rem;
+    font-family: var(--ff-inter);
+
+}
+
+.text h1 strong {
+    color: var(--clr-purple-500);
+}
+
+.text p {
+    font-family: var(--ff-inter);
+    font-size: 0.9375rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.65;
+    color: var(--clr-white-para);
+    letter-spacing: 0;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+}
+
+.stats span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: var(--ff-inter);
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+}
+
+.stats strong {
+    font-family: var(--ff-lexend);
+    font-size: 0.75rem;
+    font-weight: var(--fw-regular);
+    line-height: 2;
+    letter-spacing: 1px;
+    color: var(--clr-white-stat);
+    text-transform: uppercase;
+}
+
+@media (max-width: 1025px) {
+    .card {
+        width: 36.5rem;
+        height: 55.25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 767px) {
+    body{
+        padding: 1rem;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+        max-width: 20.4375rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .image-container img {
+       border-radius: 0.625rem 0.625rem 0 0;
+    }
+
+    .card-content {
+        height: 33.75rem;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .text{
+        gap: 0.5rem;
+    }
+    .text h1 {
+        font-size: 1.75rem;
+    }
+    .text p {
+        font-size: 0.875rem;
+    }
+    .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .stats span {
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--clr-white-stat);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
