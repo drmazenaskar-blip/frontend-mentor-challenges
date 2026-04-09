@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700&family=Lexend+Deca:wght@400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none
+}
+
+
+/* ===== Variables ===== */
+
+:root {
+
+
+    /* ===== Layout widths ===== */
+    --layout-mobile: 375px;
+    --layout-desktop: 1440px;
+
+    /* ===== Colors ===== */
+    /* Primary */
+    --clr-gold-500: hsl(31, 77%, 52%);
+    --clr-cyan-800: hsl(184, 100%, 22%);
+    --clr-green-950: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --clr-gray-100: hsl(0, 0%, 95%);
+
+    /* ===== Typography ===== */
+    --fs-body: 15px;
+    --fs-heading: 2.5rem;
+    --card-padding: 3rem;
+
+    /* Fonts */
+    --ff-body: 'Lexend Deca', sans-serif;
+    --ff-heading: 'Big Shoulders', sans-serif;
+    --fw-body: 400;
+    --fw-heading: 700;
+}
+
+/* ===== Google Fonts ===== */
+
+/* ===== Reset ===== */
+body {
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+/* start of main */
+main{
+    width: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 0 auto ;
+
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--card-padding);
+}
+
+.card--sedans {
+    background-color: var(--clr-gold-500);
+
+}
+
+.card--suvs {
+    background-color: var(--clr-cyan-800);
+}
+
+.card--luxury {
+    background-color: var(--clr-green-950);
+
+}
+
+.card figure {
+    margin-bottom: 2.5rem;
+    height: auto;
+    width: fit-content;
+}
+
+.card figure img {
+    width: 64px;
+    height: 40px;
+
+}
+
+.card__title {
+    font-family: var(--ff-heading);
+    font-weight: bold;
+    font-size: var(--fs-heading);
+    line-height: 1.2;
+    color: var(--clr-gray-100);
+    margin-bottom: 1.5rem;
+}
+
+.card__description {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-body);
+    font-size: var(--fs-body);
+    line-height: 1.65;
+    color: white;
+    margin-bottom: 5rem
+}
+
+.card__button {
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    background-color: var(--clr-gray-100);
+    border-radius: 1.5625rem;
+}
+
+.card--sedans .card__button {
+    color: var(--clr-gold-500);
+}
+
+.card--suvs .card__button {
+    color: var(--clr-cyan-800);
+}
+
+.card--luxury .card__button {
+    color: var(--clr-green-950);
+}
+
+.card__button:hover {
+    background-color: transparent;
+    color: white;
+    border: solid 2px white;
+
+}
