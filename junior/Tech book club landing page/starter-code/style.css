@@ -134,6 +134,10 @@ section {
 /* ====== End of global rules== =====*/
 
 /* ========start of header========= */
+.logo img {
+  border-radius: 0%;
+}
+
 header {
     position: relative;
     padding: 2rem 0rem 5rem;
