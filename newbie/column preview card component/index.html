@@ -9,20 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel=" stylesheet" href="style.css">
   <title>Frontend Mentor | 3-column preview card component</title>
-  <style>
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <main>
+    <h1 class="sr-only">3-Column Preview Card Component</h1>
     <div class="container">
       <article class="card card--sedans">
         <figure class="card__icon">
@@ -33,7 +24,7 @@
           Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your
           next road trip.
         </p>
-        <a href="#" class="card__button">Learn More</a>
+        <a href="#" class="card__button" aria-label="Learn more about our sedan cars">Learn More</a>
       </article>
 
       <article class="card card--suvs">
@@ -45,7 +36,7 @@
           Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and
           off-road adventures.
         </p>
-        <a href="#" class="card__button">Learn More</a>
+        <a href="#" class="card__button" aria-label="Learn more about our SUVs cars">Learn More</a>
       </article>
 
       <article class="card card--luxury">
@@ -57,7 +48,7 @@
           Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
           arrive in style.
         </p>
-        <a href="#" class="card__button">Learn More</a>
+        <a href="#" class="card__button"aria-label="Learn more about our LUXURY cars" >Learn More</a>
       </article>
     </div>
   </main>
