@@ -29,6 +29,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 1rem;
 }
 main {
     display: flex;
