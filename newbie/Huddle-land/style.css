@@ -26,7 +26,6 @@ body {
     align-items: center;
     background-color: var(--purple-700);
     background-image: url(images/bg-desktop.svg);
-    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1rem;
@@ -67,13 +66,13 @@ main .header {
 
 }
 
-.content .info .text .head h1 {
+.content  .head h1 {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     line-height: 1.25;
     color: white;
-    margin-bottom: 1.5rem;
+    margin-block-end: 1.5rem;
 }
 
 .content .info .text .head p {
@@ -119,8 +118,7 @@ main .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .content ul li i{
  color: white;
@@ -132,6 +130,14 @@ main .header {
 .content ul li:hover i {
     color: var(--magenta-400);
 }
+.btn-register:focus {
+    outline: 3px solid black; 
+    
+}
+.content ul li:focus {
+    outline: 3px solid black;
+    border-radius: 50%;
+}
 .content ul li a {
     text-decoration: none;
     color: inherit;
@@ -140,11 +146,13 @@ main .header {
     align-items: center;
     width: 100%;
     height: 100%;
-    cursor: pointer;
+  
 }
+
 .content ul .bumb{
      animation:  bumb 3s ease-in-out infinite;
      will-change: transform;
+    
 }
 @keyframes bumb{
     0%{
@@ -191,4 +199,9 @@ main .header {
 @media (max-width: 375px) {
     main { gap: 2rem; }
     .content .info { gap: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
