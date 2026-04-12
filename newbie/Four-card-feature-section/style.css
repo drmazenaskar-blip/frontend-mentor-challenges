@@ -96,7 +96,6 @@ main {
 }
 
 .card {
-    min-height: 250px;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -171,6 +170,32 @@ main {
 
 /* =================End of main============== */
 
+footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+footer a i {
+    font-size: 1.75rem;
+    color: black;
+    animation: bumb 3s ease-in-out infinite;
+}
+
+@keyframes bumb {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 /* =================start of responsive==============  */
 @media (max-width: 820px) {
     main {
@@ -236,33 +261,14 @@ main {
     .card.blue {
         order: 4;
     }
+    footer {
+        display: none;
+    }
 
     /* Calculator */
 }
-
-footer {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-footer a i {
-    font-size: 1.75rem;
-    color: black;
-    animation: bumb 3s ease-in-out infinite;
-}
-
-@keyframes bumb {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
