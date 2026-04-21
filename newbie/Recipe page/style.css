@@ -74,17 +74,19 @@ li span {
     font-weight: bold;
 }
 
+body {
 
-
-/* start of main */
-main {
-    width: 100%;
+    margin: 0;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--stone-100);
-    display: grid;
-    place-items: center;
+    padding: 120px 0px;
 
 }
+
+/* start of main */
 
 .container {
     width: 100%;
@@ -95,6 +97,7 @@ main {
     gap: 2.5rem;
     background-color: var(--white);
     border-radius: 1.5rem;
+
 }
 
 .container figure img {
@@ -196,11 +199,12 @@ main {
     .recipe {
         padding: 0px 2rem 2.5rem 2rem;
     }
-    
-    .container figure img{
+
+    .container figure img {
         border-radius: 0;
     }
-    h1{
+
+    h1 {
         font-size: 2.25rem;
     }
 

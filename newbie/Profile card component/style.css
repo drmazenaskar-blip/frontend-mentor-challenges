@@ -1,0 +1,140 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --blue-600: hsl(185, 75%, 39%);
+    --navy-950: hsl(229, 23%, 23%);
+    --gray-500: hsl(227, 10%, 46%);
+
+    /* Neutral */
+    --gray-100: hsl(225, 10%, 92%);
+
+    /* Typography */
+    --font-main: "Kumbh Sans", sans-serif;
+
+    --font-size-body: 18px;
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.25;
+    color: var(--navy-950)
+}
+
+p {
+    font-size: 0.625rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    color: var(--gray-500);
+    text-transform: capitalize;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* ============================================ */
+body {
+    padding: 1rem;
+    font-family: var(--font-main);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--blue-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    ;
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.card {
+    max-width: 350px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card-img {
+    position: relative;
+}
+
+img:last-child {
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card-info {
+    padding-top: 4.5rem;
+    text-align: center;
+}
+
+.info-name span {
+    font-weight: var(--fw-regular);
+    margin-left: 0.5rem;
+    color: var(--gray-500);
+    font-size: 1.125rem;
+}
+
+.info-name p {
+    margin-top: 0.5rem;
+}
+
+.info-stats {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+}
+
+.stat-item h2 {
+    font-size: 1.125rem;
+    color: var(--navy-950);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
