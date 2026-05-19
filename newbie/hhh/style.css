@@ -1,0 +1,337 @@
+/* CSS ROOT VARIABLES */
+:root {
+    --color-cyan-dark: #4D96A9;
+    --color-cyan-light: #71C0D4;
+    --color-purple-dark: #855FB1;
+    --color-purple-light: #B18BDD;
+    --color-dark: #28283D;
+    --color-grey: #87879D;
+    --color-light-bg: #FAFAFA;
+    --color-white: #FFFFFF;
+    --font-main: 'Red Hat Display', sans-serif;
+}
+
+/* GLOBAL RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* SECTION: HEADER & HERO */
+.hero-section {
+    padding: 48px 0 64px 0;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-content {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-dark);
+    margin-bottom: 34px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-grey);
+    margin-bottom: 32px;
+}
+
+/* BUTTONS */
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 29px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-cyan {
+    background-color: var(--color-cyan-dark);
+    color: var(--color-white);
+}
+
+.btn-cyan:hover {
+    background-color: var(--color-cyan-light);
+}
+
+.btn-purple {
+    background-color: var(--color-purple-dark);
+    color: var(--color-white);
+}
+
+.btn-purple:hover {
+    background-color: var(--color-purple-light);
+}
+
+.btn .version {
+    color: #8FE3F9;
+    margin-left: 4px;
+}
+
+.avatar-grid {
+    width: auto;
+    max-width: 390px;
+    flex-shrink: 0;
+    display: block; 
+}
+
+.avatar-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.left-grid {
+    transform: translateX(-32px);
+}
+
+.right-grid {
+    transform: translateX(32px);
+}
+
+/* SECTION: TIMELINE DIVIDER */
+.timeline-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 80px 0;
+}
+
+.timeline-divider .line {
+    width: 1px;
+    height: 84px;
+    background-color: rgba(135, 135, 157, 0.25);
+}
+
+.timeline-divider .badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-grey);
+    margin-top: -1px;
+}
+
+/* SECTION: FEATURES & GALLERY */
+.features-section {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 64px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.05;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.features-content {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.features-content .subtitle {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--color-cyan-dark);
+    display: block;
+    margin-bottom: 24px;
+}
+
+.features-content h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-dark);
+    margin-bottom: 32px;
+}
+
+.features-content p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-grey);
+}
+
+/* SECTION: FOOTER CALL TO ACTION */
+.footer-divider {
+    margin-bottom: -28px;
+    z-index: 3;
+}
+
+.footer-cta {
+    position: relative;
+    background-color: var(--color-cyan-dark);
+    background-image: url(assets/desktop/image-footer.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 116px 24px 92px 24px;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(77, 150, 169, 0.90) 0%, rgba(77, 150, 169, 0.90) 100%);
+    z-index: 1;
+}
+
+.footer-container {
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-cta h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 350px;
+}
+
+.footer-cta p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 350px;
+}
+
+/* RESPONSIVE DESIGN (MOBILE & TABLET) */
+@media (max-width: 1100px) {
+    .hero-wrapper {
+        flex-direction: column;
+        padding: 0 24px;
+    }
+
+    .avatar-grid {
+        display: none;
+    }
+
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .footer-cta h2, .footer-cta p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .features-content h2 {
+        font-size: 32px;
+    }
+
+    .footer-cta h2 {
+        font-size: 32px;
+    }
+}
