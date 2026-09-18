@@ -37,7 +37,7 @@
         <!-- First Name -->
         <div class="input-group">
           <label for="firstName">First Name</label>
-          <input type="text" placeholder="First Name" id="firstName" autocomplete="given-name" aria-describedby="firstName-error">
+          <input type="text" placeholder="First Name" id="firstName" autocomplete="given-name">
           <span class="error-icon" aria-hidden="true">!</span>
           <p class="error-text" id="firstName-error">
             First Name cannot be empty
@@ -47,7 +47,7 @@
         <!-- Last Name -->
         <div class="input-group">
           <label for="lastName">Last Name</label>
-          <input type="text" placeholder="Last Name" id="lastName" autocomplete="family-name" aria-describedby="lastName-error">
+          <input type="text" placeholder="Last Name" id="lastName" autocomplete="family-name">
           <span class="error-icon" aria-hidden="true">!</span>
           <p class="error-text" id="lastName-error">
             Last Name cannot be empty
@@ -57,7 +57,7 @@
         <!-- Email -->
         <div class="input-group">
           <label for="email">Email</label>
-          <input type="email" placeholder="email@example.com" id="email" autocomplete="username" aria-describedby="email-error">
+          <input type="email" placeholder="email@example.com" id="email" autocomplete="username">
           <span class="error-icon" aria-hidden="true">!</span>
           <p class="error-text" id="email-error">
             Looks like this is not an email
@@ -68,12 +68,14 @@
         <!-- Password -->
         <div class="input-group">
           <label for="password">Password</label>
-          <input type="password" placeholder="Password" id="password" autocomplete="new-password" aria-describedby="password-error">
+          <input type="password" placeholder="Password" id="password" autocomplete="new-password">
           <span class="error-icon" aria-hidden="true">!</span>
           <p class="error-text" id="password-error">
             Password cannot be empty
           </p>
-          <i class="fa-solid fa-eye" aria-label="Show password" role="button" tabindex="0"></i>
+          <button type="button" class="password-toggle" aria-label="Show password">
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+          </button>
         </div>
         <!-- Submit Button -->
         <button class="submit-btn" type="submit">CLAIM YOUR FREE TRIAL</button>

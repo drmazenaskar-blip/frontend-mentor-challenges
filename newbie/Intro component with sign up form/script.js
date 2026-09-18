@@ -1,19 +1,20 @@
 const form = document.querySelector(".signup-form");
 const fields = document.querySelectorAll(".input-group  input");
 const password = document.querySelector("#password");
-const eyeIcon = document.querySelector(".fa-eye");
+const eyeIcon = document.querySelector(".password-toggle");
 // console.log(password)
 
 function checkValiedInput(input) {
   const inputParent = input.parentElement;
-
   if (input.value.trim() === "" || !input.validity.valid) {
     inputParent.classList.add("error");
     input.setAttribute("aria-invalid", "true");
+    input.setAttribute("aria-describedby", `${input.id}-error`);
     return false;
   } else {
     inputParent.classList.remove("error");
     input.removeAttribute("aria-invalid");
+    input.removeAttribute("aria-describedby");
     return true;
   }
 }
