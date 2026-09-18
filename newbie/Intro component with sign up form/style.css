@@ -31,7 +31,7 @@ body {
     color: var(--text-primary);
     transition: background-color var(--transition-speed) ease,
         color var(--transition-speed) ease;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@ body {
     font-size: clamp(0.85rem, 2vw, 0.8rem);
 }
 
-.singup-form {
+.signup-form {
     background-color: var(--bg-secondary);
     padding: 32px 40px;
     border-radius: 10px;
@@ -112,6 +112,7 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     outline: none;
+    margin-top: 10px;
     color: var(--text-primary);
     background-color: var(--bg-secondary);
     transition: border-color var(--transition-speed) ease,
@@ -129,7 +130,7 @@ body {
     display: none;
     position: absolute;
     right: 20px;
-    top: 35%;
+    top: 64%;
     cursor: pointer;
     transition: var(--transition-speed);
     color: var(--text-secondary);
@@ -153,7 +154,7 @@ body {
     display: none;
     position: absolute;
     right: 25px;
-    top: 13px;
+    top: 50px;
     background-color: var(--error-color);
     color: var(--text-on-accent);
     width: 24px;
@@ -202,6 +203,12 @@ body {
         background-color var(--transition-speed) ease;
 }
 
+.submit-btn:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+
 .submit-btn:hover {
     opacity: 0.85;
 }
@@ -222,6 +229,10 @@ body {
     text-decoration: none;
     font-weight: 700;
     transition: color var(--transition-speed) ease;
+}
+
+.terms a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width : 1024px) {
