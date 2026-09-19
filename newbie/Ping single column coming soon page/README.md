@@ -37,7 +37,7 @@ as closely as possible using CSS.
 I want to improve my form validation and responsive design skills
 and continue building interactive JavaScript projects.
 ## live Demo
-[View Live Demo](https://drmazenaskar-blip.github.io/frontend-mentor-challenges/newbie/ping-coming-soon-page/)
+[View Live Demo](https://drmazenaskar-blip.github.io/frontend-mentor-challenges/newbie/Ping%20single%20column%20coming%20soon%20page/)
 
 
 ## Challenge
