@@ -16,7 +16,7 @@
 
 body {
     font-family: var(--font-main);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--very-dark-blue);
     background-color: #ffffff;
     display: flex;
@@ -39,7 +39,7 @@ body {
 }
 
 .logo h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -50,7 +50,7 @@ body {
 
 /* Intro Section */
 .intro h2 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 300;
     color: var(--gray);
     margin-bottom: 12px;
@@ -62,7 +62,7 @@ body {
 }
 
 .intro p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: var(--very-dark-blue);
     margin-bottom: 35px;
 }
@@ -90,7 +90,7 @@ body {
     border: 1px solid var(--pale-blue);
     border-radius: 30px;
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: 0.9375rem;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -110,10 +110,10 @@ body {
 
 .error-msg {
     display: none;
-    font-size: 14px;
+    font-size: 0.9375rem;
     font-style: italic;
     color: var(--light-red);
-    margin-top: 8px;
+    margin-top: 0.5rem;
     padding-left: 30px;
 }
 
@@ -130,7 +130,7 @@ body {
     border: none;
     border-radius: 30px;
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: 0.9375rem;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(76, 123, 243, 0.25);
@@ -176,7 +176,7 @@ footer {
     justify-content: center;
     color: var(--blue);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9375rem;
     transition: all 0.3s ease;
 }
 
@@ -246,5 +246,11 @@ footer {
 
     50% {
         transform: translateY(-6px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-links a:last-child {
+        animation: none;
     }
 }

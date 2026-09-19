@@ -32,10 +32,13 @@ and display an appropriate error message when the input is empty or invalid.
 I also practiced building a responsive layout and matching a design
 as closely as possible using CSS.
 
+One challenge I solved was preventing the error message from causing
 ## Continued Development
 
-I want to improve my form validation and responsive design skills
-and continue building interactive JavaScript projects.
+I would improve the form validation by providing more detailed feedback
+for different validation errors and further refining the responsive layout
+for smaller screen sizes.
+
 ## live Demo
 [View Live Demo](https://drmazenaskar-blip.github.io/frontend-mentor-challenges/newbie/Ping%20single%20column%20coming%20soon%20page/)
 
