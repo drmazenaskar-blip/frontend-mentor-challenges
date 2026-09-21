@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- ----------------------------------------Links------------------------------------------------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- ----------------------------------------Links------------------------------------------------------------------------- -->
+  <title> Interactive rating component</title>
+</head>
+
+<body>
+  <!-- Rating state start -->
+  <main class="container">
+    <div class="card card-rating active" id="rating-card">
+      <div class="star-container">
+        <i class="fas fa-star icon-star"></i>
+      </div>
+      <h1 class="card-title">How did we do?</h1>
+      <p class="card-des">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <div class="rating-buttons" role="group" aria-label="Rating from 1 to 5">
+        <button class="btn-rating" value="1">1</button>
+        <button class="btn-rating" value="2">2</button>
+        <button class="btn-rating" value="3">3</button>
+        <button class="btn-rating" value="4">4</button>
+        <button class="btn-rating" value="5">5</button>
+      </div>
+      <button class="btn-submit" id="submit-btn">Submit</button>
+      <p class="error-msg" id="error-msg" role="alert">
+        Please select a rating before submitting
+      </p>
+    </div>
+    <!-- Rating state end -->
+    <!-- Thank you state start -->
+    <div class="card card-thanks" id="thanks-card">
+      <img src="images/illustration-thank-you.svg" alt="Illustration of a phone" class="thanks-image">
+      <div class="selected-summary">
+        You selected <span id="selected-rating">--</span> out of 5
+      </div>
+      <h1 class="card-title">Thank you!</h1>
+      <p class="card-des center">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+    <!-- Thank you state end -->
+  </main>
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

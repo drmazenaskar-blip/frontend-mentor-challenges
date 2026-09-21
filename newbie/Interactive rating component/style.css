@@ -1,0 +1,221 @@
+:root {
+    /* Primary */
+    --orange-500: hsl(25, 97%, 53%);
+
+    /* Neutral */
+    --white: hsl(0, 100%, 100%);
+    --grey-300: hsl(217, 12%, 80%);
+    --grey-500: hsl(217, 12%, 63%);
+    --grey-800: hsl(213, 19%, 25%);
+    --grey-900: hsl(213, 19%, 18%);
+    --grey-950: hsl(216, 12%, 8%);
+
+    /* Typography */
+    --font-size: 15px;
+    --font-family: "Overpass", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: var(--grey-950);
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+.card {
+    background-color: var(--grey-900);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 412px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card.active {
+    display: flex;
+}
+
+.shake-card {
+    animation: shake 0.5s ease-in-out;
+}
+
+
+@media (max-width: 767px) {
+    .card {
+        max-width: 328px;
+    }
+}
+
+/* Rating state start */
+.star-container {
+    background-color: var(--grey-800);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange-500);
+    margin-bottom: 2rem;
+}
+
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+
+.card-des {
+    font-size: var(--font-size);
+    color: var(--grey-500);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.card-des.center {
+    text-align: center;
+}
+
+/* Rating-buttons============== */
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.btn-rating {
+    background-color: var(--grey-800);
+    color: var(--grey-500);
+    border: none;
+    width: 3.18rem;
+    height: 3.18rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    transition: background-color 0.2s, color 0.2s;
+    outline: none;
+}
+
+.btn-rating:hover {
+    background-color: var(--white);
+    color: var(--grey-950);
+}
+
+.btn-rating:active {
+    transform: scale(0.97);
+}
+
+.btn-rating:focus,
+.btn-rating.selected {
+    background-color: var(--orange-500);
+    color: var(--white);
+}
+
+/* Btn-submit======================= */
+.btn-submit {
+    background-color: var(--orange-500);
+    color: var(--white);
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--white);
+    color: var(--grey-950);
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+}
+
+/* =====Rating state end=====  */
+/* ================Thank you state start=================== */
+.card-thanks {
+    align-items: center;
+}
+
+.thanks-image {
+    max-width: 140px;
+    margin-bottom: 2rem;
+}
+
+.selected-summary {
+    background-color: var(--grey-800);
+    color: var(--orange-500);
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.error-msg {
+    color: var(--orange-500);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-msg.active {
+    display: block;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+/* ===Thank you state end===== */
