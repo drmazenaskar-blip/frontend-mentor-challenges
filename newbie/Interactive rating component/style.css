@@ -28,7 +28,7 @@ body {
     background-color: var(--grey-950);
     color: var(--white);
     font-family: var(--font-family);
-    font-size: var(--font-size-base);
+     font-size: var(--font-size);
     font-weight: var(--font-weight-regular);
     min-height: 100vh;
     display: flex;

@@ -17,12 +17,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of the Interactive rating component](images/preview.jpg)
+![Screenshot of the Interactive rating component](images/Screenshot%202026-09-21%20083634.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)
-- Live Site URL: [Add live site URL here](https://drmazenaskar-blip.github.io/frontend-mentor-challenges/)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-dC9et9nk2R)
+- Live Site URL: [Add live site URL here](https://drmazenaskar-blip.github.io/frontend-mentor-challenges/newbie/Interactive%20rating%20component/)
 
 ## My process
 
@@ -39,16 +39,10 @@ Users should be able to:
 
 ### What I learned
 
-While building this project, I practiced working with interactive components using JavaScript.
-
-I learned how to:
-
-- Handle user interactions with event listeners
-- Store and retrieve the selected rating
-- Update the UI dynamically using JavaScript
-- Switch between the rating card and the thank-you card
-- Create responsive layouts with CSS
-- Add interactive hover and focus states
+- I learned how to store the selected rating and use it when the user submits the form.
+- I learned how to switch between the rating card and the thank-you card using JavaScript and CSS classes.
+- I learned how to handle dynamic content for screen reader users using `aria-live` and move focus to the thank-you heading with `focus()`.
+- I learned why `tabindex="-1"` is useful when an element needs to receive focus programmatically without becoming part of the normal Tab order.
 
 ### Continued development
 

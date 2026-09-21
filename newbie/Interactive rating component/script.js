@@ -4,7 +4,8 @@ const ratingCard = document.getElementById("rating-card");
 const thanksCard = document.getElementById("thanks-card");
 const selectedRatingSpan = document.getElementById("selected-rating");
 const errorMsg = document.getElementById("error-msg");
-console.log(ratingCard, thanksCard);
+const thanksHeading = document.querySelector("#thanks-heading");
+
 let currentRating = 0;
 
 // Handle clicks on the rating buttons
@@ -25,10 +26,9 @@ ratingButtons.forEach(function (button) {
 submitButton.addEventListener("click", () => {
   if (currentRating > 0) {
     selectedRatingSpan.textContent = currentRating;
-
     ratingCard.classList.remove("active");
-
     thanksCard.classList.add("active");
+		thanksHeading.focus();
   } else {
     ratingCard.classList.remove("shake-card");
     errorMsg.classList.remove("active");
